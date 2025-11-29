@@ -20,6 +20,8 @@ async function loadRealData() {
     elements.completed2.textContent = data.statistics.completedAssignment2;
     elements.completed3.textContent = data.statistics.completedAssignment3;
     elements.completed4.textContent = data.statistics.completedAssignment4;
+    elements.completed5.textContent = data.statistics.completedAssignment5;
+    elements.completed6.textContent = data.statistics.completedAssignment6;
     
     // Обновляем прогресс бар
     updateProgressBar(data.statistics);
@@ -110,7 +112,9 @@ const elements = {
     completed1: document.getElementById('completed1'),
     completed2: document.getElementById('completed2'),
     completed3: document.getElementById('completed3'),
-    completed4: document.getElementById('completed4')
+    completed4: document.getElementById('completed4'),
+    completed5: document.getElementById('completed5'),
+    completed6: document.getElementById('completed6')
 };
 
 // Initialize application
@@ -283,7 +287,7 @@ async function handleLogin() {
 function updateUI() {
     if (appState.userRole === 'captain') {
         elements.captainPanel.classList.remove('hidden');
-        elements.teamName.textContent = `Команда: ${appState.teamName}`;
+        elements.teamName.textContent = `(команда: ${appState.teamName})`;
         updateAssignmentButtons();
     } else {
         elements.captainPanel.classList.add('hidden');
@@ -296,19 +300,12 @@ function updateAssignmentButtons() {
         const isSubmitted = appState.submittedAnswers.has(assignment);
         
         if (isSubmitted) {
-            btn.classList.remove('bg-gpb-button-blue', 'hover:bg-opacity-90');
-            btn.classList.add('bg-green-500', 'hover:bg-green-600');
-            btn.innerHTML = `
-                <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                Отправлено
-            `;
+            btn.classList.remove('text-gray-500', 'hover:bg-sportmaster-blue', 'hover:bg-opacity-10');
+            btn.classList.add('text-gray-300', 'hover:text-green-600');
+            btn.innerHTML = `ОТПРАВЛЕНО`;
             btn.disabled = false;
         } else {
-            btn.classList.remove('bg-green-500', 'hover:bg-green-600');
-            btn.classList.add('bg-gpb-button-blue', 'hover:bg-opacity-90');
-            btn.innerHTML = `Задание ${assignment}`;
+            btn.innerHTML = `ОТПРАВИТЬ`;
             btn.disabled = false;
         }
     });
@@ -431,11 +428,23 @@ function updateTeamSubmissionStatus(teams) {
                       currentTeam.assignment4 !== undefined && 
                       currentTeam.assignment4 !== '' &&
                       !(typeof currentTeam.assignment4 === 'number' && isNaN(currentTeam.assignment4));
+
+    const hasAnswer5 = currentTeam.assignment5 !== null && 
+                      currentTeam.assignment5 !== undefined && 
+                      currentTeam.assignment5 !== '' &&
+                      !(typeof currentTeam.assignment5 === 'number' && isNaN(currentTeam.assignment5));
+
+    const hasAnswer6 = currentTeam.assignment6 !== null && 
+                      currentTeam.assignment6 !== undefined && 
+                      currentTeam.assignment6 !== '' &&
+                      !(typeof currentTeam.assignment6 === 'number' && isNaN(currentTeam.assignment6));
     
     if (hasAnswer1) appState.submittedAnswers.add('1');
     if (hasAnswer2) appState.submittedAnswers.add('2');
     if (hasAnswer3) appState.submittedAnswers.add('3');
     if (hasAnswer4) appState.submittedAnswers.add('4');
+    if (hasAnswer5) appState.submittedAnswers.add('5');
+    if (hasAnswer6) appState.submittedAnswers.add('6');
     
     updateAssignmentButtons();
 
@@ -483,8 +492,10 @@ function updateProgressBar(statistics) {
     const totalAssignments = statistics.completedAssignment1 + 
                            statistics.completedAssignment2 + 
                            statistics.completedAssignment3 + 
-                           statistics.completedAssignment4;
-    const maxPossibleAssignments = totalTeams * 4;
+                           statistics.completedAssignment4 +
+                           statistics.completedAssignment5 +
+                           statistics.completedAssignment6;
+    const maxPossibleAssignments = totalTeams * 6;
     const progressPercentage = maxPossibleAssignments > 0 ? Math.round((totalAssignments / maxPossibleAssignments) * 100) : 0;
     
     // Update progress bar
@@ -545,5 +556,5 @@ function updateLeaderboard(teams) {
     `).join('');
 }
 
-// Auto-refresh every 30 seconds
+// Auto-refresh every {x} seconds
 setInterval(loadRealData, 30000);
