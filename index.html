@@ -9,27 +9,26 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Чемпионат по промптингу" />
     <link rel="manifest" href="./favicon/site.webmanifest" />
-    <title>Чемпионат по промптингу - Газпромбанк</title>
+    <title>Чемпионат по промптингу - Спортмастер</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'gpb-blue': '#0066CC',
-                        'gpb-dark-blue': '#004499',
-                        'gpb-orange': '#FF6600',
-                        'gpb-button-blue': 'rgb(43, 97, 236)',
-                        'gpb-gray': '#F8F9FA',
-                        'gpb-text': '#333333',
-                        'gpb-text-light': '#666666'
+                        'sportmaster-blue': '#1551e5',
+                        'sportmaster-dark-blue': '#0e42c1',
+                        'sportmaster-red': '#ff0016',
+                        'sportmaster-gray': '#e8eefd',
+                        'sportmaster-text': '#333333',
+                        'sportmaster-text-light': '#666666'
                     },
                     fontFamily: {
-                        'gpb': ['Gazprombank-Sans', 'Inter', 'Roboto', 'sans-serif']
+                        'sportmaster': ['Gazprombank-Sans', 'Inter', 'Roboto', 'sans-serif']
                     },
                     borderRadius: {
-                        'gpb': '8px',
-                        'gpb-lg': '12px'
+                        'sportmaster': '8px',
+                        'sportmaster-lg': '12px'
                     }
                 }
             }
@@ -71,12 +70,12 @@
         }
     </style>
 </head>
-<body class="bg-gpb-gray min-h-screen">
+<body class="bg-sportmaster-gray min-h-screen">
     <!-- Header -->
-    <header class="w-full py-4 px-6">
-        <div class="flex items-start justify-between max-w-6xl mx-auto">
+    <header class="w-full py-4 px-6 bg-sportmaster-blue">
+        <div class="flex items-center justify-between max-w-6xl mx-auto">
             <!-- QR Code Button -->
-            <button id="qrButton" class="p-2 text-gpb-blue hover:text-gpb-orange transition-colors duration-200">
+            <button id="qrButton" class="p-2 text-blue-500 hover:text-white transition-colors duration-200">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path>
                 </svg>
@@ -84,12 +83,12 @@
             
             <!-- Title -->
             <div class="center">
-                <svg width="190" height="56" viewBox="0 0 190 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M177.821 19.477h3.932l-.024 6.2h.854l2.244-6.2h4.255l-3.054 8.191 3.494 9.067h-4.603l-2.264-6.94h-.926l.024 6.94h-3.932V19.477ZM164.575 19.477h3.908V25.7h2.798v-6.224h3.905v17.258h-3.905v-6.917h-2.798v6.917h-3.908V19.477ZM150.956 36.757h4.069l.487-2.984h2.795l.487 2.984h4.069l-3.422-17.255H154.4l-3.444 17.255Zm5.964-12.03.74 5.252h-1.504l.764-5.252ZM140.04 36.735h4.763c1.04 0 5.365-.441 5.388-5.67 0-4.39-3.351-5.155-5.526-5.155h-.716v-2.291h5.294v-4.141h-9.203v17.257Zm3.909-3.471v-3.908h.578c.485 0 1.735.022 1.735 1.803 0 1.807-1.25 2.105-1.735 2.105h-.578ZM124.527 19.477h3.399l3.003 4.071 3.032-4.071h3.376v17.258h-4.004V26.209l-2.404 3.007-2.402-3.008v10.527h-4V19.477ZM116.271 36.944c4.74 0 6.334-4.444 6.334-8.86 0-4.417-1.594-8.86-6.334-8.86-4.739 0-6.334 4.443-6.334 8.86 0 4.416 1.595 8.86 6.334 8.86Zm0-4.189c-1.413 0-2.126-1.64-2.126-4.672 0-3.031.713-4.673 2.126-4.673 1.413 0 2.126 1.642 2.126 4.674 0 3.031-.713 4.671-2.126 4.671ZM98.351 36.735h4v-5.69h1.343c3.952 0 5.179-3.564 5.179-5.834 0-2.219-1.413-5.734-5.179-5.734h-5.343v17.258Zm4-13.464h.949c.902 0 1.481.555 1.481 1.99 0 1.85-.973 1.987-1.481 1.987h-.949V23.27ZM85.149 19.477h10.913v17.258h-4V23.64h-2.913v13.094h-4V19.477ZM76.94 26.164c.646 0 1.828-.417 1.828-1.689 0-1.503-1.364-1.598-1.76-1.598-.46 0-1.338.072-2.195.488l-.046-3.75c1.364-.346 2.336-.439 3.49-.439 3.286 0 4.742 2.292 4.742 4.533 0 2.177-1.25 3.492-2.474 4.003v.161c1.18.374 2.751 1.504 2.751 4.142 0 3.264-2.265 5.066-5.18 5.066-1.549-.021-2.566-.23-3.792-.9l.07-3.588c1.133.488 1.896.533 2.66.533 1.295 0 1.802-.95 1.802-1.641 0-.973-.624-1.62-1.987-1.62h-1.62v-3.7h1.711ZM61.22 36.735h4.045l.51-2.986h2.797l.485 2.986h4.045L69.68 19.477h-5.04l-3.42 17.258Zm5.94-12.052.764 5.274h-1.527l.763-5.274ZM53.474 19.477h8.205v4.302h-4.137v12.956h-4.068V19.477ZM20.013 8C8.973 8 0 16.97 0 28.01 0 39.029 8.974 48 20.013 48 31.028 48 40 39.029 40 28.01 40 16.97 31.028 8 20.013 8Zm0 39C9.529 47 1 38.479 1 28.01 1 17.525 9.525 9 20.013 9 30.48 9 39 17.527 39 28.01 39 38.477 30.477 47 20.013 47Z" fill="#476BF0"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.795 16.037c4.831-2.15 10.729-2.01 13.894-.6.995.463 1.664.743 1.967 1.295-3.285-.88-4.695-1.039-7.445-.972-3.91.07-9.112 1.618-11.1 2.801l-.875 1.089c2.863-1.694 8.205-2.8 11.167-2.894 3.306-.045 5.87.256 8.23 1.111-.14.6-.44.902-.948 1.204-9.434-1.644-15.007.298-20.048 3.583l-.368 1.086c5.619-3.86 12.507-4.923 19.145-3.768-2.382.833-5.226 1.018-7.607 1.569-2.034.464-3.121.604-5.83 1.508-2.747.902-4.37 1.827-5.385 3.007-.486.557-.856 1.203-.95 1.895-.043.415-.02.788.12 1.16.11.323.366.646.645.97-.322.554-.604 1.274-.138 2.107.207.39.739.783 1.25 1.157l-.143.413c-.07.489-.137 1.065.187 1.55.553.879 1.224 1.459 2.287 2.014.164.718.416 1.294.971 1.806 1.179 1.085 3.817 3.167 8.509 3.492 3.517.233 6.036-.833 6.985-1.296l1.155-.6c-1.964.784-5.27 1.248-7.978 1.016-3.93-.324-7.442-2.89-7.882-3.632.137.09.323.161.482.232 4.603 2.22 10.545 3.424 18.153.324l.627-.602c-6.917 2.15-12.972 2.083-19.472-1.318.071-.323.21-.605.508-.831 1.664.735 3.261 1.34 5.204 1.732 2.266.417 4.855.511 6.984.417 2.15-.092 6.403-1.156 8.416-2.22.184-.161.276-.437.46-.624-3.928 1.43-8.6 2.104-11.42 1.894-2.752-.206-5.2-.532-8.44-2.011.623-.253 1.271-.462 1.919-.65 2.127.65 4.299 1.04 6.866 1.158 2.546.116 8.487-.83 12.232-3.097.117-.324.232-.674.232-.674s-5.203 2.78-11.097 2.78c-2.753 0-4.44-.396-5.688-.696 2.773-.51 6.266-.927 10.194-1.92 1.988-.51 4.44-1.668 5.55-2.638.948-.858 1.689-1.969 1.436-3.098-.05-.304-.465-1.017-.974-1.274.486-.624.44-1.157.372-1.617-.048-.352-.21-.742-.415-1.088a3.932 3.932 0 0 0-1.253-1.113 2.279 2.279 0 0 0-.184-1.435c-.485-.833-1.362-1.548-2.866-2.312-.069-.302-.256-.695-.577-1.087-1.895-1.874-4.995-2.776-7.609-2.823a19.874 19.874 0 0 0-.435-.005c-3.057 0-5.511.687-7.03 1.396-.79.342-1.391.714-1.99 1.129Zm17.454 2.524c.65.417 1.39 1.042 1.48 1.69-.692-.258-1.432-.53-2.148-.717.232-.255.576-.648.668-.973Zm-3.468 2.892c.789-.303 1.318-.624 1.783-.996 1.037.276 2.009.625 2.799.97-.136.203-.928.935-1.17.935a.072.072 0 0 1-.036-.007c-1.107-.303-2.078-.673-3.376-.902Zm6.222.924c.623.532.807.902.508 1.481-.414-.3-.857-.463-1.34-.694.298-.232.577-.484.832-.787Zm-19.214 2.13c2.89-.86 6.266-1.503 9.32-1.874 2.1-.256 3.213-.022 5.202.509-5.11 1.364-10.153 1.801-14.963 3.214-3.877 1.127-4.906 2.546-4.922 2.546-1.714-2.36 4.228-4.047 5.363-4.396Zm2.73 2.843c4.275-.925 8.253-1.502 9.894-1.918 1.99-.489 3.377-.949 4.345-1.41.047-.07 1.619.692 1.78.874-.53.442-1.268.814-2.08 1.088-2.427.88-6.842 1.804-9.177 2.157-2.359.391-4.328.69-6.937 1.381-1.505.397-2.523.859-3.263 1.346-.555-.325-.878-.416-1.386-.834 1.803-1.528 5.481-2.383 6.823-2.684ZM14.45 31.1c4.07-.999 7.657-1.182 12.605-2.522 2.38-.627 4.115-1.3 5.203-2.128.16-.142.321-.256.485-.394 1.433 2.22-3.954 3.932-7.633 4.722-2.035.412-4.856.92-5.781 1.085-2.4.393-3.191.602-4.855 1.087-.832-.325-1.665-.672-2.425-1.066.76-.323 1.593-.578 2.4-.783Zm-5.64.738c-.162.14-.371.28-.532.44-.368-.21-.74-.668-.556-1.088.37.234.647.42 1.088.648Zm1.687.86c.694.324 1.41.62 2.08.923a7.14 7.14 0 0 0-1.292.626 63.137 63.137 0 0 1-1.642-.928c.231-.208.53-.415.854-.622Zm-.275 2.426c-.163.232-.28.415-.347.649-.58-.487-.859-.88-.834-1.321.393.255.786.462 1.18.672Z" fill="#476BF0"></path></svg>
-                <span class="text-2s font-bold text-black">Чемпионат по промптингу</h1>
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 190 25'><path fill='#f01' d='M109.7 7.7 103 0l3.8 17.5L120.6 0zm-89.4 7.6 9.2-10.4L19.2 9 0 5z'/><path fill='#fff' d='m102.6 4.5-4 14.3h7zm16.2 0L108 18.8h6.8zM185.3 6a6 6 0 0 0-3.2 1 7 7 0 0 0-1.2 1.2l.4-1.9h-4.2l-4.5 16.1h4.7l1.5-5c.4 1 1.3 1.6 2.5 1.6h.8c1.2-.2 2.4-.7 3.6-1.5.7-.5 1.4-1.2 2-2 .5-.8 1-1.9 1.3-3 .5-1.8.5-3.3-.1-4.6-.6-1.2-1.8-1.9-3.6-1.9m-1 6.5c-.3.9-.7 1.6-1.2 2-.3.4-.6.5-1 .7a2.8 2.8 0 0 1-.8 0c-.7 0-1-.1-1.3-.7-.2-.5-.2-1.2 0-2 .3-1.2.8-1.8 1.2-2.1.2-.3.8-.8 1.6-.8 1.3 0 2 1 1.4 3M82 6a6 6 0 0 0-3.1 1 7 7 0 0 0-1.3 1.2l.5-1.9h-4.3l-4.5 16.1H74l1.4-5c.5 1 1.4 1.6 2.6 1.6h.8c1.2-.2 2.4-.7 3.6-1.5.7-.5 1.3-1.2 1.9-2 .5-.8 1-1.9 1.4-3 .5-1.8.4-3.3-.1-4.6C85 6.7 83.8 6 81.9 6m-1 6.5c-.2.9-.6 1.6-1.1 2-.3.4-.7.5-1 .7a2.8 2.8 0 0 1-.9 0c-.7 0-1-.1-1.2-.7-.3-.5-.3-1.2 0-2 .3-1.2.8-1.8 1.2-2.1.2-.3.8-.8 1.6-.8 1.3 0 2 1 1.4 3M.4 24.3l12-4.8 22.6 5-24-12.3zM18 1a3.2 3.2 0 0 0-3 3.4c.2 1.7 1.8 3 3.5 3a3.2 3.2 0 0 0 3-3.5 3.2 3.2 0 0 0-3.5-3m150.3 14.3a2.5 2.5 0 0 1-2 1c-.8 0-1.2-.2-1.6-.6-.3-.5-.4-1-.2-1.8h9c.7-2.2.7-4.1-.2-5.5-.8-1.4-2.3-2.2-4.6-2.2l-1.2.1a9.2 9.2 0 0 0-7.5 6.7c-.5 2-.2 3.5.7 4.7 1 1 2.4 1.6 4.4 1.6a11.3 11.3 0 0 0 4.3-.8 7.3 7.3 0 0 0 3.5-3.2zm-.8-6h.6c.6 0 1 .2 1.2.6.3.4.4 1 .3 1.6h-4.3c.3-1.2 1-2 2.2-2.2zm-36.6-2.7c-.8-.2-1.9-.4-3.3-.4a15.3 15.3 0 0 0-2.9.3c-1 .2-1.8.5-2.5.8a5 5 0 0 0-2.4 3.1h4.7l.2-.3c.1-.3.5-.6.8-.7a2.7 2.7 0 0 1 1-.2c.4 0 .7 0 1 .2.3 0 .5.5.4.8-.2.5-.8.9-1.7 1l-4.7.8a7.2 7.2 0 0 0-1.7.7c-.4.3-.9.6-1.3 1.1-.4.5-.7 1-.9 1.8-.3 1.2-.1 2.1.6 2.8.6.6 1.5.9 2.6.9a7.2 7.2 0 0 0 5-1.7l-.2 1.3h5s-.4-.2-.2-.8l1.9-6.7.4-2.1c0-.6 0-1.1-.3-1.6-.2-.5-.7-.8-1.5-1m-5 9a2.8 2.8 0 0 1-1.2.8h-.8c-1.1 0-1.5-.3-1.4-1 .2-.3.4-.7.7-.9l1-.4 1.3-.2 1.4-.4c-.1.8-.4 1.5-1 2.1m14.6-.3a2.1 2.1 0 0 1-1.5.6c-.7 0-1.1-.3-1.3-.9-.2-.5-.2-1.5.2-2.7.1-.3.5-1.3.9-1.7.2-.4.5-.7.9-.9.3-.2.7-.3 1.1-.3.6 0 .9.2 1.1.5.3.3.3.7.2 1.3h4.8c.3-1.8-.1-3.2-1.1-4-1-.7-2.4-1-4-1-2 0-3.8.5-5.4 1.7a9 9 0 0 0-3.3 4.9c-.6 2-.4 3.6.6 4.8 1 1 2.4 1.6 4.4 1.6a9.8 9.8 0 0 0 4.7-1.2 7.3 7.3 0 0 0 2-1.6c.6-.6 1-1.4 1.4-2.4h-4.8c-.2.6-.5 1-.9 1.3M70.6 8c-.8-1.2-2.3-2-4.7-2a9.9 9.9 0 0 0-1.8.2c-1.5.3-2.9.9-4 1.8a9 9 0 0 0-3 4.6c-.4 1.8-.3 3.3.4 4.6.8 1.3 2.3 2 4.7 2 .7 0 1.3 0 2-.2a8.3 8.3 0 0 0 3.8-1.8 9 9 0 0 0 3-4.6c.5-1.8.4-3.3-.4-4.6m-4.2 4.6c-.3 1-.7 1.8-1.3 2.4-.3.4-1 1-2 1-.7 0-1.2-.3-1.4-1a4 4 0 0 1 0-2.4c.3-1 .7-1.8 1.3-2.5a2.5 2.5 0 0 1 2-.8c.7 0 1.3.2 1.5.8.2.7.2 1.5-.1 2.5m20.7-2.7h3.7l-2.5 8.9H93l2.5-9h3.4l1-3.5H88.1zm61 0h3.7l-2.4 8.9h4.6l2.6-9h3.4l1-3.5h-11.8zM44.7 6.3l-3.5 12.5h4.7l2.5-9h3.8l-2.5 9h4.8L58 6.3zm-8.9 8.9a2 2 0 0 1-1.5.6c-.7 0-1.1-.3-1.3-.9-.2-.5-.2-1.4.2-2.7a9 9 0 0 1 .9-1.7c.2-.4.5-.7.9-.9.3-.2.7-.3 1.1-.3.6 0 .9.2 1.1.5.3.3.3.8.2 1.3H42c.3-1.8-.1-3.2-1.1-4-1-.7-2.5-1-4-1a8.7 8.7 0 0 0-8.7 6.6c-.6 2-.4 3.6.6 4.8 1 1 2.4 1.6 4.4 1.6A9.8 9.8 0 0 0 38 18a7.5 7.5 0 0 0 2-1.6c.5-.6 1-1.4 1.4-2.4h-4.8c-.2.6-.5 1-.9 1.3'/></svg>
+                <span class="text-2s font-bold text-white">Чемпионат по промптингу</h1>
             </div>
 
             <!-- Auth Button -->
-            <button id="authButton" class="p-2 text-gpb-blue hover:text-gpb-orange transition-colors duration-200">
+            <button id="authButton" class="p-2 text-blue-500 hover:text-white transition-colors duration-200">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
                 </svg>
@@ -99,108 +98,125 @@
 
     <!-- Main Content -->
     <main class="max-w-6xl mx-auto px-6 py-8">
-        <!-- Captain Panel (hidden by default) -->
-        <div id="captainPanel" class="hidden mb-8">
-            <div class="bg-white rounded-gpb-lg shadow-lg p-6">
-                <h2 id="teamName" class="text-xl font-bold text-black mb-6">Команда: <span class="text-gpb-text">Название команды</span></h2>
-                <div class="grid grid-cols-2 gap-4">
-                    <button class="assignment-btn bg-gpb-button-blue text-white py-4 px-6 rounded-gpb font-medium hover:bg-opacity-90 transition-all duration-200" data-assignment="1">
-                        Задание 1
-                    </button>
-                    <button class="assignment-btn bg-gpb-button-blue text-white py-4 px-6 rounded-gpb font-medium hover:bg-opacity-90 transition-all duration-200" data-assignment="2">
-                        Задание 2
-                    </button>
-                    <button class="assignment-btn bg-gpb-button-blue text-white py-4 px-6 rounded-gpb font-medium hover:bg-opacity-90 transition-all duration-200" data-assignment="3">
-                        Задание 3
-                    </button>
-                    <button class="assignment-btn bg-gpb-button-blue text-white py-4 px-6 rounded-gpb font-medium hover:bg-opacity-90 transition-all duration-200" data-assignment="4">
-                        Задание 4
-                    </button>
-                </div>
-            </div>
-        </div>
+
+
+        
+
+
+
+
 
         <!-- Dashboard -->
-        <div class="bg-gradient-to-br from-white via-blue-50 to-gpb-gray rounded-gpb-lg shadow-xl p-8 mb-8 border border-blue-100">
+        <div class="bg-gradient-to-br from-white via-blue-50 to-sportmaster-gray rounded-sportmaster-lg shadow-xl p-8 mb-8 border border-blue-100">
             <div class="flex items-center justify-between mb-8">
-                <div>
-                    <h2 class="text-2xl font-bold text-black mb-2">Общий дашборд</h2>
-                    <p class="text-gpb-text-light text-sm">Мониторинг прогресса команд</p>
-                </div>
-                <button id="refreshButton" class="p-3 text-gpb-blue hover:text-gpb-orange transition-all duration-200 hover:bg-blue-50 rounded-full">
+                <h2 class="text-2xl font-bold text-black mb-2">Общий дашборд <span id="teamName" class="text-gray-500 font-thin"></span></h2>
+                <button id="refreshButton" class="p-3 text-sportmaster-blue hover:text-sportmaster-red transition-all duration-200 hover:bg-blue-50 rounded-full">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                     </svg>
                 </button>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-                <!-- Total Teams -->
-                <div class="bg-gradient-to-br from-gpb-blue to-blue-600 rounded-gpb-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                        </svg>
+
+            <div>
+                <div class="flex justify-between gap-4 text-white">
+
+                    <!-- Assignment 1 -->
+                    <div class="w-full bg-gradient-to-br from-blue-500 to-sportmaster-blue rounded-sportmaster-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-sportmaster-blue bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <div id="completed1" class="text-3xl font-bold mb-2">0</div>
+                        <div class="text-sm font-medium text-opacity-90">Загрузили список участников</div>
                     </div>
-                    <div id="totalTeams" class="text-3xl font-bold text-white mb-2">0</div>
-                    <div class="text-sm font-medium text-white text-opacity-90">Всего команд</div>
+
+                    <!-- Assignment 2 -->
+                    <div class="w-full bg-gradient-to-br from-blue-500 to-sportmaster-blue rounded-sportmaster-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-sportmaster-blue bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path>
+                            </svg>
+                        </div>
+                        <div id="completed2" class="text-3xl font-bold mb-2">0</div>
+                        <div class="text-sm font-medium text-opacity-90">Сгенерировали идею проекта</div>
+                    </div>
+
+                    <!-- Assignment 3 -->
+                    <div class="w-full bg-gradient-to-br from-blue-500 to-sportmaster-blue rounded-sportmaster-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-sportmaster-blue bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div id="completed3" class="text-3xl font-bold mb-2">0</div>
+                        <div class="text-sm font-medium text-opacity-90">Создали описание проекта</div>
+                    </div>
+
+                    <!-- Assignment 4 -->
+                    <div class="w-full bg-gradient-to-br from-blue-500 to-sportmaster-blue rounded-sportmaster-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-sportmaster-blue bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <div id="completed4" class="text-3xl font-bold mb-2">0</div>
+                        <div class="text-sm font-medium text-opacity-90">Оформили план проекта</div>
+                    </div>
+
+                    <!-- Assignment 5 -->
+                    <div class="w-full bg-gradient-to-br from-blue-500 to-sportmaster-blue rounded-sportmaster-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-sportmaster-blue bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <div id="completed5" class="text-3xl font-bold mb-2">0</div>
+                        <div class="text-sm font-medium text-opacity-90">Описали финальные выгоды</div>
+                    </div>
+
+                    <!-- Assignment 6 -->
+                    <div class="w-full bg-gradient-to-br from-blue-500 to-sportmaster-blue rounded-sportmaster-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-sportmaster-blue bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <div id="completed6" class="text-3xl font-bold mb-2">0</div>
+                        <div class="text-sm font-medium text-opacity-90">Отправили итоговый питч</div>
+                    </div>
                 </div>
 
-                <!-- Assignment 1 - Strategy -->
-                <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-gpb-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
+                <!-- Captain Panel (hidden by default) -->
+                <div id="captainPanel" class="hidden mt-2">
+                    <div class="flex justify-between gap-2 text-gray-700 text-sm">
+                        <button class="assignment-btn w-full  py-4 px-6 rounded-sportmaster font-medium hover:bg-sportmaster-blue hover:bg-opacity-10" data-assignment="1">
+                        </button>
+                        <button class="assignment-btn w-full py-4 px-6 rounded-sportmaster font-medium hover:bg-sportmaster-blue hover:bg-opacity-10" data-assignment="2">
+                        </button>
+                        <button class="assignment-btn w-full py-4 px-6 rounded-sportmaster font-medium hover:bg-sportmaster-blue hover:bg-opacity-10" data-assignment="3">
+                        </button>
+                        <button class="assignment-btn w-full py-4 px-6 rounded-sportmaster font-medium hover:bg-sportmaster-blue hover:bg-opacity-10" data-assignment="4">
+                        </button>
+                        <button class="assignment-btn w-full py-4 px-6 rounded-sportmaster font-medium hover:bg-sportmaster-blue hover:bg-opacity-10" data-assignment="5">
+                        </button>
+                        <button class="assignment-btn w-full py-4 px-6 rounded-sportmaster font-medium hover:bg-sportmaster-blue hover:bg-opacity-10" data-assignment="6">
+                        </button>
                     </div>
-                    <div id="completed1" class="text-3xl font-bold text-white mb-2">0</div>
-                    <div class="text-sm font-medium text-white text-opacity-90">Подготовили стратегию развития</div>
                 </div>
 
-                <!-- Assignment 2 - Marketing -->
-                <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-gpb-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path>
-                        </svg>
-                    </div>
-                    <div id="completed2" class="text-3xl font-bold text-white mb-2">0</div>
-                    <div class="text-sm font-medium text-white text-opacity-90">Сформировали маркетинговый план</div>
-                </div>
-
-                <!-- Assignment 3 - Finance -->
-                <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-gpb-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <div id="completed3" class="text-3xl font-bold text-white mb-2">0</div>
-                    <div class="text-sm font-medium text-white text-opacity-90">Создали финансовую модель</div>
-                </div>
-
-                <!-- Assignment 4 - Report -->
-                <div class="bg-gradient-to-br from-red-500 to-red-600 rounded-gpb-lg p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                    </div>
-                    <div id="completed4" class="text-3xl font-bold text-white mb-2">0</div>
-                    <div class="text-sm font-medium text-white text-opacity-90">Отправили итоговый отчет</div>
-                </div>
             </div>
 
             <!-- Progress Bar -->
-            <div class="mt-8 bg-white rounded-gpb-lg p-6 border border-gray-200 shadow-sm">
+            <div class="mt-8 bg-white rounded-sportmaster-lg p-6 border border-gray-200 shadow-sm">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-semibold text-black">Общий прогресс</h3>
-                    <span id="progressPercentage" class="text-sm font-medium text-gpb-text-light">0%</span>
+                    <h3 class="text-lg font-semibold text-black">Общий прогресс (<span id="totalTeams" class="font-bold">0</span> команд)</h3>
+                    <span id="progressPercentage" class="text-sm font-medium text-sportmaster-text-light">0%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-3">
-                    <div id="progressBar" class="bg-gradient-to-r from-gpb-blue to-gpb-orange h-3 rounded-full transition-all duration-500" style="width: 0%"></div>
+                    <div id="progressBar" class="bg-gradient-to-r from-sportmaster-blue to-sportmaster-red h-3 rounded-full transition-all duration-500" style="width: 0%"></div>
                 </div>
-                <div class="flex justify-between text-xs text-gpb-text-light mt-2">
+                <div class="flex justify-between text-xs text-sportmaster-text-light mt-2">
                     <span>Выполнено заданий</span>
                     <span id="totalAssignments">0 из 0 возможных</span>
                 </div>
@@ -208,11 +224,11 @@
         </div>
 
         <!-- Leaderboard -->
-        <div class="bg-white rounded-gpb-lg shadow-lg p-6">
+        <div class="bg-white rounded-sportmaster-lg shadow-lg p-6">
             <h2 class="text-xl font-bold text-black mb-6">Рейтинг команд</h2>
             <div id="leaderboard">
-                <div class="text-center text-gpb-text-light py-8">
-                    <svg class="w-12 h-12 mx-auto mb-4 text-gpb-text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="text-center text-sportmaster-text-light py-8">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-sportmaster-text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <p>Пока нет ни одной команды</p>
@@ -224,33 +240,33 @@
     <!-- Auth Modal -->
     <div id="authModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
         <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="bg-white rounded-gpb-lg shadow-xl max-w-md w-full p-6">
+            <div class="bg-white rounded-sportmaster-lg shadow-xl max-w-md w-full p-6">
                 <h3 class="text-xl font-bold text-black mb-6">Вход в систему</h3>
                 
                 <div class="mb-6">
-                    <label class="block text-sm font-medium text-gpb-text mb-2">Выберите роль:</label>
+                    <label class="block text-sm font-medium text-sportmaster-text mb-2">Выберите роль:</label>
                     <div class="space-y-2">
                         <label class="flex items-center">
-                            <input type="radio" name="role" value="captain" class="text-gpb-blue focus:ring-gpb-blue">
-                            <span class="ml-2 text-gpb-text">Капитан команды</span>
+                            <input type="radio" name="role" value="captain" class="text-sportmaster-blue focus:ring-sportmaster-blue">
+                            <span class="ml-2 text-sportmaster-text">Капитан команды</span>
                         </label>
                         <label class="flex items-center">
-                            <input type="radio" name="role" value="observer" class="text-gpb-blue focus:ring-gpb-blue">
-                            <span class="ml-2 text-gpb-text">Наблюдатель</span>
+                            <input type="radio" name="role" value="observer" class="text-sportmaster-blue focus:ring-sportmaster-blue">
+                            <span class="ml-2 text-sportmaster-text">Наблюдатель</span>
                         </label>
                     </div>
                 </div>
 
                 <div id="teamNameInput" class="mb-6 hidden">
-                    <label class="block text-sm font-medium text-gpb-text mb-2">Название команды:</label>
-                    <input type="text" id="teamNameField" class="w-full px-3 py-2 border border-gray-300 rounded-gpb focus:outline-none focus:ring-2 focus:ring-gpb-blue focus:border-transparent" placeholder="Введите название команды">
+                    <label class="block text-sm font-medium text-sportmaster-text mb-2">Название команды:</label>
+                    <input type="text" id="teamNameField" class="w-full px-3 py-2 border border-gray-300 rounded-sportmaster focus:outline-none focus:ring-2 focus:ring-sportmaster-blue focus:border-transparent" placeholder="Введите название команды">
                 </div>
 
                 <div class="flex space-x-4">
-                    <button id="loginButton" class="flex-1 bg-gpb-orange text-white py-2 px-4 rounded-gpb font-medium hover:bg-opacity-90 transition-all duration-200">
+                    <button id="loginButton" class="flex-1 bg-sportmaster-blue text-white py-2 px-4 rounded-sportmaster font-medium hover:bg-opacity-90 transition-all duration-200">
                         Войти
                     </button>
-                    <button id="cancelButton" class="flex-1 bg-gray-300 text-gpb-text py-2 px-4 rounded-gpb font-medium hover:bg-opacity-90 transition-all duration-200">
+                    <button id="cancelButton" class="flex-1 bg-gray-300 text-sportmaster-text py-2 px-4 rounded-sportmaster font-medium hover:bg-opacity-90 transition-all duration-200">
                         Отмена
                     </button>
                 </div>
@@ -261,15 +277,15 @@
     <!-- Answer Modal -->
     <div id="answerModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
         <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="bg-white rounded-gpb-lg shadow-xl max-w-2xl w-full p-6">
+            <div class="bg-white rounded-sportmaster-lg shadow-xl max-w-2xl w-full p-6">
                 <h3 id="answerModalTitle" class="text-xl font-bold text-black mb-4">Задание 1</h3>
                 
                 <div class="mb-4">
-                    <label class="block text-sm font-medium text-gpb-text mb-2">Ваш ответ:</label>
-                    <textarea id="answerText" rows="8" class="w-full px-3 py-2 border border-gray-300 rounded-gpb focus:outline-none focus:ring-2 focus:ring-gpb-blue focus:border-transparent resize-none" placeholder="Введите ваш ответ на задание..."></textarea>
+                    <label class="block text-sm font-medium text-sportmaster-text mb-2">Ваш ответ:</label>
+                    <textarea id="answerText" rows="8" class="w-full px-3 py-2 border border-gray-300 rounded-sportmaster focus:outline-none focus:ring-2 focus:ring-sportmaster-blue focus:border-transparent resize-none" placeholder="Введите ваш ответ на задание..."></textarea>
                 </div>
 
-                <div class="mb-6 p-3 bg-yellow-50 border border-yellow-200 rounded-gpb">
+                <div class="mb-6 p-3 bg-yellow-50 border border-yellow-200 rounded-sportmaster">
                     <div class="flex items-center">
                         <svg class="w-5 h-5 text-yellow-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
@@ -279,10 +295,10 @@
                 </div>
 
                 <div class="flex space-x-4">
-                    <button id="submitAnswerButton" class="flex-1 bg-gpb-orange text-white py-2 px-4 rounded-gpb font-medium hover:bg-opacity-90 transition-all duration-200">
+                    <button id="submitAnswerButton" class="flex-1 bg-sportmaster-blue text-white py-2 px-4 rounded-sportmaster font-medium hover:bg-opacity-90 transition-all duration-200">
                         Отправить
                     </button>
-                    <button id="cancelAnswerButton" class="flex-1 bg-gray-300 text-gpb-text py-2 px-4 rounded-gpb font-medium hover:bg-opacity-90 transition-all duration-200">
+                    <button id="cancelAnswerButton" class="flex-1 bg-gray-300 text-sportmaster-text py-2 px-4 rounded-sportmaster font-medium hover:bg-opacity-90 transition-all duration-200">
                         Отмена
                     </button>
                 </div>
@@ -293,10 +309,10 @@
     <!-- Links Modal -->
     <div id="linksModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
         <div class="flex items-center justify-center min-h-screen p-2 sm:p-4">
-            <div class="bg-white rounded-gpb-lg shadow-xl w-full max-w-6xl max-h-[90vh] flex flex-col">
+            <div class="bg-white rounded-sportmaster-lg shadow-xl w-full max-w-6xl max-h-[90vh] flex flex-col">
                 <!-- Header with close button -->
                 <div class="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200">
-                    <h3 class="text-xl font-bold text-black">Полезные ссылки</h3>
+                    <h3 class="text-xl font-bold text-black">ИИ Спортмастера: <a href="https://chat.ai.localcorp.net/" class="text-sportmaster-blue hover:text-sportmaster-red transition-colors duration-200">https://chat.ai.localcorp.net/</a></h3>
                     <button id="closeLinksModalTop" class="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-all duration-200">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -306,47 +322,48 @@
                 
                 <!-- Scrollable content -->
                 <div class="flex-1 overflow-y-auto p-4 sm:p-6">
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                         <!-- DeepSeek -->
                         <div class="text-center">
-                            <h4 class="text-lg font-semibold text-gpb-text mb-4">DeepSeek</h4>
+                            <h4 class="text-lg font-semibold text-sportmaster-text mb-4">DeepSeek</h4>
                             <div class="mb-4">
-                                <img src="./QRs/deepseek.png" alt="DeepSeek QR Code" class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-gpb shadow-sm">
+                                <img src="./QRs/deepseek.png" alt="DeepSeek QR Code" class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-sportmaster shadow-sm">
                             </div>
-                            <a href="https://chat.deepseek.com" target="_blank" class="text-gpb-blue hover:text-gpb-orange transition-colors duration-200 text-sm break-all">
+                            <a href="https://chat.deepseek.com" target="_blank" class="text-sportmaster-blue hover:text-sportmaster-red transition-colors duration-200 text-sm break-all">
                                 https://chat.deepseek.com
                             </a>
                         </div>
 
                         <!-- Qwen -->
                         <div class="text-center">
-                            <h4 class="text-lg font-semibold text-gpb-text mb-4">Qwen</h4>
+                            <h4 class="text-lg font-semibold text-sportmaster-text mb-4">Qwen</h4>
                             <div class="mb-4">
-                                <img src="./QRs/qwen.png" alt="Qwen QR Code" class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-gpb shadow-sm">
+                                <img src="./QRs/qwen.png" alt="Qwen QR Code" class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-sportmaster shadow-sm">
                             </div>
-                            <a href="https://chat.qwen.ai/" target="_blank" class="text-gpb-blue hover:text-gpb-orange transition-colors duration-200 text-sm break-all">
+                            <a href="https://chat.qwen.ai/" target="_blank" class="text-sportmaster-blue hover:text-sportmaster-red transition-colors duration-200 text-sm break-all">
                                 https://chat.qwen.ai/
                             </a>
                         </div>
 
                         <!-- Mistral -->
                         <div class="text-center">
-                            <h4 class="text-lg font-semibold text-gpb-text mb-4">Mistral</h4>
+                            <h4 class="text-lg font-semibold text-sportmaster-text mb-4">Mistral</h4>
                             <div class="mb-4">
-                                <img src="./QRs/mistral.png" alt="Mistral QR Code" class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-gpb shadow-sm">
+                                <img src="./QRs/mistral.png" alt="Mistral QR Code" class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-sportmaster shadow-sm">
                             </div>
-                            <a href="https://chat.mistral.ai" target="_blank" class="text-gpb-blue hover:text-gpb-orange transition-colors duration-200 text-sm break-all">
+                            <a href="https://chat.mistral.ai" target="_blank" class="text-sportmaster-blue hover:text-sportmaster-red transition-colors duration-200 text-sm break-all">
                                 https://chat.mistral.ai
                             </a>
                         </div>
 
                             <!-- perplexity -->
                             <div class="text-center">
-                            <h4 class="text-lg font-semibold text-gpb-text mb-4">Perplexity</h4>
+                            <h4 class="text-lg font-semibold text-sportmaster-text mb-4">Perplexity</h4>
                             <div class="mb-4">
-                                <img src="./QRs/perplexity.png" alt="Perplexity QR Code" class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-gpb shadow-sm">
+                                <img src="./QRs/perplexity.png" alt="Perplexity QR Code" class="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-sportmaster shadow-sm">
                             </div>
-                            <a href="https://www.perplexity.ai/" target="_blank" class="text-gpb-blue hover:text-gpb-orange transition-colors duration-200 text-sm break-all">
+                            <a href="https://www.perplexity.ai/" target="_blank" class="text-sportmaster-blue hover:text-sportmaster-red transition-colors duration-200 text-sm break-all">
                                 https://www.perplexity.ai/
                             </a>
                         </div>
@@ -355,7 +372,7 @@
 
                 <!-- Footer with close button -->
                 <div class="p-4 sm:p-6 border-t border-gray-200 bg-gray-50">
-                    <button id="closeLinksModal" class="w-full bg-gpb-blue text-white py-3 px-4 rounded-gpb font-medium hover:bg-opacity-90 transition-all duration-200">
+                    <button id="closeLinksModal" class="w-full bg-sportmaster-blue text-white py-3 px-4 rounded-sportmaster font-medium hover:bg-opacity-90 transition-all duration-200">
                         Закрыть
                     </button>
                 </div>
