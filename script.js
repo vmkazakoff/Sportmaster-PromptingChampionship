@@ -286,11 +286,17 @@ async function handleLogin() {
 
 function updateUI() {
     if (appState.userRole === 'captain') {
-        elements.captainPanel.classList.remove('hidden');
+        // Показываем все кнопки отправки
+        document.querySelectorAll('.assignment-btn').forEach(btn => {
+            btn.classList.remove('hidden');
+        });
         elements.teamName.textContent = `(команда: ${appState.teamName})`;
         updateAssignmentButtons();
     } else {
-        elements.captainPanel.classList.add('hidden');
+        // Скрываем все кнопки отправки
+        document.querySelectorAll('.assignment-btn').forEach(btn => {
+            btn.classList.add('hidden');
+        });
     }
 }
 
@@ -300,7 +306,7 @@ function updateAssignmentButtons() {
         const isSubmitted = appState.submittedAnswers.has(assignment);
         
         if (isSubmitted) {
-            btn.classList.remove('text-gray-500', 'hover:bg-sportmaster-blue', 'hover:bg-opacity-10');
+            btn.classList.remove('text-gray-500', 'hover:bg-sportmaster-blue', 'hover:bg-opacity-20');
             btn.classList.add('text-gray-300', 'hover:text-green-600');
             btn.innerHTML = `ОТПРАВЛЕНО`;
             btn.disabled = false;
